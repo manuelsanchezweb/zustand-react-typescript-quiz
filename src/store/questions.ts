@@ -14,15 +14,26 @@ interface State {
   reset: () => void
 }
 
+const loggerMiddleware = (config: any) => (set: any, get: any, api: any) =>
+  config(
+    (...args: any) => {
+      console.log('  applying', args)
+      set(...args)
+      console.log('  new state', get())
+    },
+    get,
+    api
+  )
+
 // Aquí tendremos el store con el estado y con todas las formas de actualizar el estado
 export const useQuestionsStore = create<State>()(
   persist(
-    (set, get) => {
+    loggerMiddleware((set: any, get: any) => {
       return {
         questions: [],
         currentQuestionIndex: 0,
 
-        fetchQuestions: async (limit) => {
+        fetchQuestions: async (limit: number) => {
           const res = await fetch(DATA_URL)
           const json = await res.json()
 
@@ -84,7 +95,7 @@ export const useQuestionsStore = create<State>()(
           set({ currentQuestionIndex: 0, questions: [] })
         },
       }
-    },
+    }),
     {
       name: 'questions',
     }
