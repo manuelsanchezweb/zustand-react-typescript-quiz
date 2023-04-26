@@ -1,32 +1,31 @@
-import { Container, Stack, Typography } from '@mui/material'
+import * as React from 'react'
 import './App.css'
-import Logo from './Logo'
-import Start from './Start'
-import { useQuestionsStore } from './store/questions'
+
+import { ThemeProvider, createTheme } from '@mui/material/styles'
+import CssBaseline from '@mui/material/CssBaseline'
+import useMediaQuery from '@mui/material/useMediaQuery'
+import Quiz from './Quiz'
 
 function App() {
-  const questions = useQuestionsStore((state) => state.questions)
-  console.log(questions)
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)')
+
+  const theme = React.useMemo(
+    () =>
+      createTheme({
+        palette: {
+          mode: prefersDarkMode ? 'dark' : 'light',
+        },
+      }),
+    [prefersDarkMode]
+  )
 
   return (
-    <main>
-      <Container maxWidth="sm">
-        <Stack
-          direction="row"
-          spacing={2}
-          alignItems="center"
-          justifyContent="center"
-        >
-          <Typography variant="h2" component="h1">
-            Melicena Quiz
-          </Typography>
-          <Logo />
-        </Stack>
-
-        {questions.length === 0 && <Start />}
-        {questions.length > 0 && <p>Hay preguntas</p>}
-      </Container>
-    </main>
+    <>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Quiz />
+      </ThemeProvider>
+    </>
   )
 }
 
