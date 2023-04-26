@@ -4,14 +4,14 @@
     "question": "¿Cuándo ha sido la última reforma del paseo?",
     "hint": "Ya ha llovido un poco en vdd...",
     "answers": ["2021", "2019", "2010", "2020"],
-    "correctAnswer": "2021"
+    "correctAnswer": 0
   },
   {
-    "id:": 2,
+    "id": 2,
     "question": "¿Cómo se llama el antiguo dueño de la tienda?",
     "hint": "Es un nombre muy común en España",
     "answers": ["Taico", "Juan", "Ramón", "Manolo"],
-    "correctAnswer": "Juan"
+    "correctAnswer": 1
   },
   {
     "id": 3,
@@ -23,7 +23,7 @@
       "Escaleras mecánicas en la torre",
       "Playas de arena fina"
     ],
-    "correctAnswer": "Tener una buena depuradora de vertidos"
+    "correctAnswer": 1
   },
   {
     "id": 4,
@@ -35,35 +35,35 @@
       "Patricio, Francisco y Manuel",
       "Patricio, Francisco y Samuel"
     ],
-    "correctAnswer": "Patricio, Francisco y Manuel"
+    "correctAnswer": 2
   },
   {
     "id": 5,
     "question": "¿Cuándo abre Emilio el quiosco?",
     "hint": "Es un día muy especial",
     "answers": ["Año Nuevo", "Semana Santa", "Día de Andalucía", "San Juan"],
-    "correctAnswer": "San Juan"
+    "correctAnswer": 3
   },
   {
     "id": 6,
     "question": "Todo buen melicenero sabe que la mezquita antes era …",
     "hint": "Es un lugar de culto",
     "answers": ["una notaría", "una tienda", "un bar", "una pizzería"],
-    "correctAnswer": "un bar"
+    "correctAnswer": 2
   },
   {
     "id": 7,
     "question": "¿Cuál fue hasta la fecha el deporte de moda en Melicena?",
     "hint": "Es un deporte divertido",
     "answers": ["Barranquismo", "Parapente", "Tenis", "Paddle surf"],
-    "correctAnswer": "Paddle surf"
+    "correctAnswer": 3
   },
   {
     "id": 8,
     "question": "¿Cuál es la primera casa del pueblo?",
     "hint": "Es una casa muy bonita",
     "answers": ["La de la Dora", "La de la Kika", "La de Emilio", "La casería"],
-    "correctAnswer": "La de la Kika"
+    "correctAnswer": 1
   },
   {
     "id": 9,
@@ -75,7 +75,7 @@
       "tendrá sardinas",
       "no es de Melicena"
     ],
-    "correctAnswer": "no cena"
+    "correctAnswer": 0
   },
   {
     "id": 10,
@@ -87,7 +87,7 @@
       "Reforma del paseo marítimo",
       "Reforma de la torre"
     ],
-    "correctAnswer": "Persecución de narcos en la playa"
+    "correctAnswer": 0
   },
   {
     "id": 11,
@@ -98,7 +98,7 @@
       "La orquesta del mar",
       "Carlos Sadness"
     ],
-    "correctAnswer": "Carmen Mari y su acordeón"
+    "correctAnswer": 1
   },
   {
     "id": 12,
@@ -109,7 +109,7 @@
       "6º de primaria",
       "Melicena no tiene colegio"
     ],
-    "correctAnswer": "6º de primaria"
+    "correctAnswer": 2
   },
   {
     "id": 13,
@@ -120,7 +120,7 @@
       "18700 (Albuñol)",
       "18750 (La Mamola)"
     ],
-    "correctAnswer": "18750 (La Mamola)"
+    "correctAnswer": 3
   },
   {
     "id": 14,
@@ -131,7 +131,7 @@
       "Piscina infinity",
       "Ayuntamiento"
     ],
-    "correctAnswer": "Ayuntamiento"
+    "correctAnswer": 3
   },
   {
     "id": 15,
@@ -142,6 +142,6 @@
       "Mari Carmen Fernández y Manuel Sánchez",
       "Asis, Pepe y Luis"
     ],
-    "correctAnswer": "Mari Carmen Fernández y Manuel Sánchez"
+    "correctAnswer": 2
   }
 ]
