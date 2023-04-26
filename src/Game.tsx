@@ -11,6 +11,7 @@ import {
 import { useQuestionsStore } from './store/questions'
 import { type Question as QuestionType } from './types'
 import { ArrowBackIosNew, ArrowForwardIos } from '@mui/icons-material'
+import { Footer } from './Footer'
 
 // es mejor dejar esta función fuera porque así solo se renderiza una vez y no una vez por cada pregunta
 const getBackgroundColor = (info: QuestionType, index: number) => {
@@ -96,6 +97,7 @@ export const Game = () => {
         </IconButton>
       </Stack>
       <Question info={questionInfo} />
+      <Footer />
     </div>
   )
 }
