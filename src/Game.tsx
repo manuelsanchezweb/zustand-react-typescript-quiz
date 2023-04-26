@@ -1,13 +1,16 @@
 import {
   Card,
+  IconButton,
   List,
   ListItem,
   ListItemButton,
   ListItemText,
+  Stack,
   Typography,
 } from '@mui/material'
 import { useQuestionsStore } from './store/questions'
 import { type Question as QuestionType } from './types'
+import { ArrowBackIosNew, ArrowForwardIos } from '@mui/icons-material'
 
 // es mejor dejar esta función fuera porque así solo se renderiza una vez y no una vez por cada pregunta
 const getBackgroundColor = (info: QuestionType, index: number) => {
@@ -65,11 +68,33 @@ export const Game = () => {
   const currentQuestionIndex = useQuestionsStore(
     (state) => state.currentQuestionIndex
   )
+  const goNextQuestion = useQuestionsStore((state) => state.goNextQuestion)
+  const goPrevQuestion = useQuestionsStore((state) => state.goPrevQuestion)
 
   const questionInfo = questions[currentQuestionIndex]
 
   return (
     <div>
+      <Stack
+        direction="row"
+        spacing={2}
+        alignItems="center"
+        justifyContent="center"
+      >
+        <IconButton
+          onClick={goPrevQuestion}
+          disabled={currentQuestionIndex === 0}
+        >
+          <ArrowBackIosNew />
+        </IconButton>
+        {currentQuestionIndex + 1} / {questions.length}
+        <IconButton
+          onClick={goNextQuestion}
+          disabled={currentQuestionIndex > questions.length - 1}
+        >
+          <ArrowForwardIos />
+        </IconButton>
+      </Stack>
       <Question info={questionInfo} />
     </div>
   )

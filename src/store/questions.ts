@@ -8,6 +8,8 @@ interface State {
   currentQuestionIndex: number
   fetchQuestions: (limit: number) => Promise<void>
   selectAnswer: (questionId: number, answerIndex: number) => void
+  goNextQuestion: () => void
+  goPrevQuestion: () => void
 }
 
 // Aquí tendremos el store con el estado y con todas las formas de actualizar el estado
@@ -54,6 +56,24 @@ export const useQuestionsStore = create<State>((set, get) => {
       }
 
       set({ questions: newQuestions })
+    },
+
+    goNextQuestion: () => {
+      const { currentQuestionIndex, questions } = get()
+      const nextQuestionIndex = currentQuestionIndex + 1
+
+      if (nextQuestionIndex < questions.length) {
+        set({ currentQuestionIndex: nextQuestionIndex })
+      }
+    },
+
+    goPrevQuestion: () => {
+      const { currentQuestionIndex } = get()
+      const prevQuestionIndex = currentQuestionIndex - 1
+
+      if (prevQuestionIndex >= 0) {
+        set({ currentQuestionIndex: prevQuestionIndex })
+      }
     },
   }
 })
