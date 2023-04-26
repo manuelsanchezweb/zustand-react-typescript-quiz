@@ -3,7 +3,7 @@ export interface Question {
   question: string
   hint: string
   answers: string[]
-  correctAnswer: number
-  userSelectedAnswer?: number
+  correctAnswerIndex: number
+  userSelectedAnswerIndex?: number
   isCorrectUserAnswer?: boolean
 }
