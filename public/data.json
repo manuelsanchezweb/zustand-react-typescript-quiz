@@ -1,0 +1,147 @@
+[
+  {
+    "id": 1,
+    "question": "¿Cuándo ha sido la última reforma del paseo?",
+    "hint": "Ya ha llovido un poco en vdd...",
+    "answers": ["2021", "2019", "2010", "2020"],
+    "correctAnswer": "2021"
+  },
+  {
+    "id:": 2,
+    "question": "¿Cómo se llama el antiguo dueño de la tienda?",
+    "hint": "Es un nombre muy común en España",
+    "answers": ["Taico", "Juan", "Ramón", "Manolo"],
+    "correctAnswer": "Juan"
+  },
+  {
+    "id": 3,
+    "question": "¿Cuál es el sueño de todo buen melicenero?",
+    "hint": "Es un sueño poco común",
+    "answers": [
+      "Una reforma del paseo",
+      "Tener una buena depuradora de vertidos",
+      "Escaleras mecánicas en la torre",
+      "Playas de arena fina"
+    ],
+    "correctAnswer": "Tener una buena depuradora de vertidos"
+  },
+  {
+    "id": 4,
+    "question": "¿Cómo se llaman los trillizos?",
+    "hint": "Los únicos trillizos de Melicena",
+    "answers": [
+      "Patricio, Sergio y Manuel",
+      "Patricio, Francisco y Rafael",
+      "Patricio, Francisco y Manuel",
+      "Patricio, Francisco y Samuel"
+    ],
+    "correctAnswer": "Patricio, Francisco y Manuel"
+  },
+  {
+    "id": 5,
+    "question": "¿Cuándo abre Emilio el quiosco?",
+    "hint": "Es un día muy especial",
+    "answers": ["Año Nuevo", "Semana Santa", "Día de Andalucía", "San Juan"],
+    "correctAnswer": "San Juan"
+  },
+  {
+    "id": 6,
+    "question": "Todo buen melicenero sabe que la mezquita antes era …",
+    "hint": "Es un lugar de culto",
+    "answers": ["una notaría", "una tienda", "un bar", "una pizzería"],
+    "correctAnswer": "un bar"
+  },
+  {
+    "id": 7,
+    "question": "¿Cuál fue hasta la fecha el deporte de moda en Melicena?",
+    "hint": "Es un deporte divertido",
+    "answers": ["Barranquismo", "Parapente", "Tenis", "Paddle surf"],
+    "correctAnswer": "Paddle surf"
+  },
+  {
+    "id": 8,
+    "question": "¿Cuál es la primera casa del pueblo?",
+    "hint": "Es una casa muy bonita",
+    "answers": ["La de la Dora", "La de la Kika", "La de Emilio", "La casería"],
+    "correctAnswer": "La de la Kika"
+  },
+  {
+    "id": 9,
+    "question": "Dicho: Melicena, el que no tiene pan...",
+    "hint": "Es un dicho muy melicenero",
+    "answers": [
+      "no cena",
+      "no tiene alacena",
+      "tendrá sardinas",
+      "no es de Melicena"
+    ],
+    "correctAnswer": "no cena"
+  },
+  {
+    "id": 10,
+    "question": "¿Cuál de estos acontecimientos es más reciente?",
+    "hint": "Es un acontecimiento muy reciente",
+    "answers": [
+      "Persecución de narcos en la playa",
+      "Caída de roca del peñón",
+      "Reforma del paseo marítimo",
+      "Reforma de la torre"
+    ],
+    "correctAnswer": "Persecución de narcos en la playa"
+  },
+  {
+    "id": 11,
+    "question": "Artista más célebre en las fiestas de verano",
+    "answers": [
+      "Dj Julian",
+      "Carmen Mari y su acordeón",
+      "La orquesta del mar",
+      "Carlos Sadness"
+    ],
+    "correctAnswer": "Carmen Mari y su acordeón"
+  },
+  {
+    "id": 12,
+    "question": "¿Hasta qué curso escolar puedes cursar en el colegio de Melicena?",
+    "answers": [
+      "2º de ESO",
+      "4º de ESO",
+      "6º de primaria",
+      "Melicena no tiene colegio"
+    ],
+    "correctAnswer": "6º de primaria"
+  },
+  {
+    "id": 13,
+    "question": "¿Qué código postal usa un buen melicenero para los paquetes?",
+    "answers": [
+      "A Melicena no llegan los paquetes",
+      "18713 (Sorvilán)",
+      "18700 (Albuñol)",
+      "18750 (La Mamola)"
+    ],
+    "correctAnswer": "18750 (La Mamola)"
+  },
+  {
+    "id": 14,
+    "question": "¿Qué no tiene Melicena?",
+    "answers": [
+      "Consultorio médico",
+      "Guadalinfo",
+      "Piscina infinity",
+      "Ayuntamiento"
+    ],
+    "correctAnswer": "Ayuntamiento"
+  },
+  {
+    "id": 15,
+    "question": "¿Quiénes son los creadores de este quiz?",
+    "answers": [
+      "Raúl Ferrandiz y Sergio Morenetti",
+      "Manuel Sabio y Fran Sabio",
+      "Mari Carmen Fernández y Manuel Sánchez",
+      "Asis, Pepe y Luis"
+    ],
+    "correctAnswer": "Mari Carmen Fernández y Manuel Sánchez"
+  }
+]
