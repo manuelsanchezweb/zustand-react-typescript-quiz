@@ -1,5 +1,6 @@
 import { create } from 'zustand'
 import { Question } from '../types'
+import { DATA_URL } from '../constants/constants'
 
 interface State {
   questions: Question[]
@@ -14,25 +15,12 @@ export const useQuestionsStore = create<State>((set) => {
     currentQuestionIndex: 0,
 
     fetchQuestions: async (limit) => {
-      console.log(limit)
-      set({
-        questions: [
-          {
-            id: 1,
-            question: '¿Cuándo ha sido la última reforma del paseo?',
-            hint: 'Ya ha llovido un poco en vdd...',
-            answers: ['2021', '2019', '2010', '2020'],
-            correctAnswer: 0,
-          },
-          {
-            id: 2,
-            question: '¿Cómo se llama el antiguo dueño de la tienda?',
-            hint: 'Es un nombre muy común en España',
-            answers: ['Taico', 'Juan', 'Ramón', 'Manolo'],
-            correctAnswer: 1,
-          },
-        ],
-      })
+      const res = await fetch(DATA_URL)
+      const json = await res.json()
+
+      // Aquí podemos hacer el random de las preguntas y poner un max dependiendo del limit
+      const questions = json.sort(() => Math.random() - 0.5).slice(0, limit)
+      set({ questions })
     },
   }
 })
