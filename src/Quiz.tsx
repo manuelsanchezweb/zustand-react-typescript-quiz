@@ -7,8 +7,8 @@ import { theme } from './constants/constants'
 
 const Quiz = () => {
   const isBiggerThanSM = useMediaQuery(theme.breakpoints.up('sm'))
-
   const questions = useQuestionsStore((state) => state.questions)
+
   return (
     <main>
       <Container maxWidth="sm">

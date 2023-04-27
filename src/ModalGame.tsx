@@ -3,6 +3,7 @@ import { useQuestionsData } from './hooks/useQuestionData'
 import { Box, Button, Modal, Typography } from '@mui/material'
 import { useQuestionsStore } from './store/questions'
 import { getFinalResultByScore } from './utils/utils'
+import { useUserStore } from './store/user'
 
 const ModalGame = () => {
   // Handle del modal
@@ -13,6 +14,8 @@ const ModalGame = () => {
   const { correct, unanswered } = useQuestionsData()
   const reset = useQuestionsStore((state) => state.reset)
 
+  const name = useUserStore((state) => state.name)
+  const setFinalScore = useUserStore((state) => state.setFinalScore)
   const resultMessage = getFinalResultByScore(correct)
 
   const style = {
@@ -30,6 +33,7 @@ const ModalGame = () => {
   useEffect(() => {
     if (unanswered == 0) {
       handleOpen()
+      setFinalScore(correct)
     }
   }, [unanswered])
 
@@ -42,7 +46,7 @@ const ModalGame = () => {
     >
       <Box sx={style}>
         <Typography id="modal-modal-title" variant="h6" component="h2">
-          Todo lo bueno llega a su fin...
+          Todo lo bueno llega a su fin, {name}...
         </Typography>
         <Typography id="modal-modal-description" sx={{ mt: 2 }}>
           {resultMessage}

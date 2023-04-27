@@ -1,7 +1,7 @@
 import melicenaLogo from './assets/melicena-round.png'
 
 const Logo = () => {
-  return <img src={melicenaLogo} alt="Melicena" width={150} height={150} />
+  return <img src={melicenaLogo} alt="Melicena" width={120} height={120} />
 }
 
 export default Logo
