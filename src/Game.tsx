@@ -91,7 +91,7 @@ export const Game = () => {
         {currentQuestionIndex + 1} / {questions.length}
         <IconButton
           onClick={goNextQuestion}
-          disabled={currentQuestionIndex > questions.length - 1}
+          disabled={currentQuestionIndex >= questions.length - 1}
         >
           <ArrowForwardIos />
         </IconButton>

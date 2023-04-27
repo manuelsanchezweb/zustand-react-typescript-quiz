@@ -14,6 +14,6 @@ https://zustand-react-typescript-quiz.vercel.app/
 
 ## 📝 To Dos
 
-- [ ] Crear un modal con unos resultados variables, dependiendo de la cantidad de correctas. El modal se abrirá en cuanto no queden preguntas por responder.
+- [x] Crear un modal con unos resultados variables, dependiendo de la cantidad de correctas. El modal se abrirá en cuanto no queden preguntas por responder.
 - [ ] Crear un store con usuarios que participan en la encuesta (nombre, puntuacion)
 - [ ] Mostrar un listado de los usuarios
