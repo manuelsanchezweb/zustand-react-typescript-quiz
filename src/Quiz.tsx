@@ -1,10 +1,13 @@
-import { Container, Stack, Typography } from '@mui/material'
+import { Container, Stack, Typography, useMediaQuery } from '@mui/material'
 import Logo from './Logo'
 import Start from './Start'
 import { useQuestionsStore } from './store/questions'
 import { Game } from './Game'
+import { theme } from './constants/constants'
 
 const Quiz = () => {
+  const isBiggerThanSM = useMediaQuery(theme.breakpoints.up('sm'))
+
   const questions = useQuestionsStore((state) => state.questions)
   return (
     <main>
@@ -14,8 +17,9 @@ const Quiz = () => {
           spacing={2}
           alignItems="center"
           justifyContent="center"
+          sx={{ my: 4 }}
         >
-          <Typography variant="h2" component="h1">
+          <Typography variant={isBiggerThanSM ? 'h2' : 'h5'} component="h1">
             Melicena Quiz
           </Typography>
 
