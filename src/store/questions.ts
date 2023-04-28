@@ -113,7 +113,8 @@ export const useQuestionsStore = create<State>()(
             )
           },
         }
-      })
+      }),
+      { name: 'questions' }
     ),
     {
       name: 'questions',

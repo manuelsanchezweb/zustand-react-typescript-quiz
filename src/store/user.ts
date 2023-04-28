@@ -13,27 +13,34 @@ interface UserState {
 
 export const useUserStore = create<UserState>()(
   persist(
-    devtools((set, get) => {
-      return {
-        id: '',
-        name: '',
-        finalScore: 0,
-        getUser: () => {
-          const { name } = get()
-          return name // Not used yet
-        },
-        setUserName: (name: string) => {
-          // For the moment in local storage
-          set({ name }, false, 'SET_USER')
-        },
-        setUserId: (id: string) => {
-          set({ id }, false, 'SET_ID')
-        },
-        setFinalScore: (score: number) => {
-          set({ finalScore: score }, false, 'SET_FINAL_SCORE')
-        },
-      }
-    }),
+    devtools(
+      (set, get) => {
+        return {
+          id: '',
+          name: '',
+          finalScore: 0,
+          getUser: () => {
+            const { name } = get()
+            return name // Not used yet
+          },
+          setUserName: (name: string) => {
+            // For the moment in local storage
+            set((state) => ({ ...state, name }), false, 'SET_USER')
+          },
+          setUserId: (id: string) => {
+            set((state) => ({ ...state, id }), false, 'SET_ID')
+          },
+          setFinalScore: (score: number) => {
+            set(
+              (state) => ({ ...state, finalScore: score }),
+              false,
+              'SET_FINAL_SCORE'
+            )
+          },
+        }
+      },
+      { name: 'user' }
+    ),
     {
       name: 'user',
     }

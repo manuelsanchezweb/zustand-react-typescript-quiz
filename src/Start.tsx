@@ -10,26 +10,41 @@ import {
 import { useQuestionsStore } from './store/questions'
 import { QUESTIONS_LIMIT } from './constants/constants'
 import { useUserStore } from './store/user'
+import { useRef, useState } from 'react'
 
 const Start = () => {
   const fetchQuestions = useQuestionsStore((state) => state.fetchQuestions)
-  const name = useUserStore((state) => state.name)
+  // const name = useUserStore((state) => state.name)
   const setUserName = useUserStore((state) => state.setUserName)
   const setUserId = useUserStore((state) => state.setUserId)
 
-  // const handleStartGame = (e: React.FormEvent<HTMLFormElement>) => {
-  //   e.preventDefault()
-  //   fetchQuestions(QUESTIONS_LIMIT)
-  // }
+  const nameRef = useRef<HTMLInputElement>(null)
+  const [isDisabled, setIsDisabled] = useState(true)
 
   const handleClick = () => {
-    fetchQuestions(QUESTIONS_LIMIT)
     setUserId(crypto.randomUUID())
+
+    if (nameRef.current?.querySelector('input')) {
+      const name = nameRef.current.querySelector('input')?.value
+      console.log(name)
+      if (name) setUserName(name)
+    } else {
+      console.log('No se ha encontrado el input')
+      setUserName('Anónimo')
+    }
+
+    fetchQuestions(QUESTIONS_LIMIT)
   }
 
   const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const name = event.target.value
-    setUserName(name)
+
+    if (name?.length > 3) {
+      // console.log('name', name)
+      setIsDisabled(false)
+    } else {
+      setIsDisabled(true)
+    }
   }
 
   return (
@@ -39,11 +54,11 @@ const Start = () => {
         advierto, aquí se demuestra quién ha pasado aquí un par de días y quién
         ha pasado aquí toda su vida.
       </Typography>
-      {/* <form onSubmit={handleStartGame}> */}
       <Stack spacing={2} sx={{ maxWidth: 'fit-content', mx: 'auto' }}>
         <FormControl>
           <InputLabel htmlFor="name">Introduce tu nombre aquí</InputLabel>
           <Input
+            ref={nameRef}
             id="name"
             placeholder="Patricio Pozo Pérez"
             aria-describedby="texto-ayuda"
@@ -53,15 +68,10 @@ const Start = () => {
             Nos gusta darte un trato personal.
           </FormHelperText>
         </FormControl>
-        <Button
-          onClick={handleClick}
-          disabled={name.length < 3}
-          variant="contained"
-        >
+        <Button onClick={handleClick} disabled={isDisabled} variant="contained">
           Empezamos
         </Button>
       </Stack>
-      {/* </form> */}
     </>
   )
 }

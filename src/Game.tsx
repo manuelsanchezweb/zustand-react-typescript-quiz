@@ -46,7 +46,7 @@ const Question = ({ info }: { info: QuestionType }) => {
       <Typography variant="h5">{info.question}</Typography>
       <Typography variant="body1">{info.hint}</Typography>
 
-      <List sx={{ my: 4, bgcolor: '#333' }} disablePadding>
+      <List sx={{ my: 4 }} disablePadding>
         {info.answers.map((answer, index) => (
           <ListItem key={index} disablePadding divider>
             <ListItemButton
