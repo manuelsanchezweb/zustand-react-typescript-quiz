@@ -54,6 +54,7 @@ const Question = ({ info }: { info: QuestionType }) => {
               sx={{
                 bgcolor: getBackgroundColor(info, index),
               }}
+              onTouchEnd={createHandleClick(index)}
               onClick={createHandleClick(index)}
             >
               <ListItemText primary={answer} />
