@@ -51,8 +51,8 @@ const Start = () => {
     <>
       <Typography variant="body1" sx={{ marginBottom: 6 }}>
         ¡Demuestra tus conocimientos meliceneros en este divertido test! Te lo
-        advierto, aquí se demuestra quién ha pasado aquí un par de días y quién
-        ha pasado aquí toda su vida.
+        advierto: aquí se demuestra quién ha pasado un par de días en el pueblo
+        y quién ha pasado toda su vida ahí.
       </Typography>
       <Stack spacing={2} sx={{ maxWidth: 'fit-content', mx: 'auto' }}>
         <FormControl>
