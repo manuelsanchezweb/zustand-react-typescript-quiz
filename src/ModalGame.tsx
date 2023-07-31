@@ -4,6 +4,7 @@ import { Box, Button, Modal, Typography } from '@mui/material'
 import { useQuestionsStore } from './store/questions'
 import { getFinalResultByScore } from './utils/utils'
 import { useUserStore } from './store/user'
+import { supabase } from './lib/api'
 
 const ModalGame = () => {
   // Handle del modal
@@ -17,6 +18,20 @@ const ModalGame = () => {
   const name = useUserStore((state) => state.name)
   const setFinalScore = useUserStore((state) => state.setFinalScore)
   const resultMessage = getFinalResultByScore(correct)
+
+  const addUserScoreToDB = async (name: string, score: number) => {
+    try {
+      const { error } = await supabase
+        .from('users')
+        .insert([{ name: name, score: score }])
+
+      if (error) {
+        throw error
+      }
+    } catch (error) {
+      console.error('Error adding user score to DB:', error)
+    }
+  }
 
   const style = {
     position: 'absolute' as 'absolute',
@@ -34,6 +49,7 @@ const ModalGame = () => {
     if (unanswered == 0) {
       handleOpen()
       setFinalScore(correct)
+      addUserScoreToDB(name, correct)
     }
   }, [unanswered])
 
@@ -53,7 +69,7 @@ const ModalGame = () => {
         </Typography>
 
         <div style={{ marginTop: '16px' }}>
-          <Button onClick={() => reset()}>Hacer el test de nuevo</Button>
+          <Button onClick={() => reset()}>Volver al inicio del quiz</Button>
         </div>
       </Box>
     </Modal>

@@ -10,11 +10,12 @@ Pequeño quiz que presenta 10 preguntas aleatorias sobre Melicena, el mejor pueb
 
 ## 🔗 Link del deploy
 
-https://zustand-react-typescript-quiz.vercel.app/
+QUIZ: https://melicena-quiz.vercel.app/
+PÁGINA con los resultados: https://www.melicena.es/quiz
 
 ## 📝 To Dos
 
 - [x] Crear un modal con unos resultados variables, dependiendo de la cantidad de correctas. El modal se abrirá en cuanto no queden preguntas por responder.
 - [x] Crear un store con usuarios que participan en la encuesta (nombre, puntuacion)
-- [ ] Mostrar un listado de los usuarios
-- [ ] No permitir crear un usuario si ya existe otro con el mismo nombre
+- [x] Mostrar un listado de los usuarios
+- [x] No permitir crear un usuario si ya existe otro con el mismo nombre

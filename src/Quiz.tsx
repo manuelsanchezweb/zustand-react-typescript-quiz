@@ -4,10 +4,24 @@ import Start from './Start'
 import { useQuestionsStore } from './store/questions'
 import { Game } from './Game'
 import { theme } from './constants/constants'
+import { useEffect, useState } from 'react'
+import { supabase } from './lib/api'
 
 const Quiz = () => {
+  const [data, setData] = useState([])
   const isBiggerThanSM = useMediaQuery(theme.breakpoints.up('sm'))
   const questions = useQuestionsStore((state) => state.questions)
+
+  useEffect(() => {
+    fetchNames()
+    console.log(data)
+  }, [])
+
+  async function fetchNames() {
+    let { data: names, error } = await supabase.from('users').select('*')
+    if (error) console.log('error', error)
+    else setData(names)
+  }
 
   return (
     <main>
@@ -26,7 +40,7 @@ const Quiz = () => {
           <Logo />
         </Stack>
 
-        {questions.length === 0 && <Start />}
+        {questions.length === 0 && <Start data={data} />}
         {questions.length > 0 && <Game />}
       </Container>
     </main>
