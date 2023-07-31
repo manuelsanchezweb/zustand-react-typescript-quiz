@@ -34,7 +34,7 @@ export const useQuestionsStore = create<State>()(
     devtools(
       loggerMiddleware((set: any, get: any) => {
         return {
-          questions: [],
+          questions: [] as Question[],
           currentQuestionIndex: 0,
 
           fetchQuestions: async (limit: number) => {
