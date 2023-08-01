@@ -2,7 +2,7 @@
   {
     "id": 1,
     "question": "¿Cuándo fue la última reforma del paseo?",
-    "hint": "Ya ha llovido un poco en vdd...",
+    "hint": "Ya ha llovido un poco en verdad...",
     "answers": ["2021", "2019", "2010", "2020"],
     "correctAnswerIndex": 0
   },
@@ -234,6 +234,6 @@
     "question": "¿Cómo se llama el dueño del quiosco?",
     "img": "/melicena-kiosco.jpg",
     "answers": ["Mauricio", "Emiliano", "Emilio", "Emelino"],
-    "correctAnswerIndex": 3
+    "correctAnswerIndex": 2
   }
 ]
