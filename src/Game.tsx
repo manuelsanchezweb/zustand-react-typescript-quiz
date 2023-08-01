@@ -45,6 +45,13 @@ const Question = ({ info }: { info: QuestionType }) => {
     <Card variant="outlined" sx={{ my: 6, p: 4, textAlign: 'left' }}>
       <Typography variant="h5">{info.question}</Typography>
       <Typography variant="body1">{info.hint}</Typography>
+      {info.img && (
+        <img
+          src={info.img}
+          alt={info.question}
+          style={{ maxWidth: '70%', marginTop: 30 }}
+        />
+      )}
 
       <List sx={{ my: 4 }} disablePadding>
         {info.answers.map((answer, index) => (

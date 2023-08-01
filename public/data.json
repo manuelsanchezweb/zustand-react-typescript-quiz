@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "question": "¿Cuándo ha sido la última reforma del paseo?",
+    "question": "¿Cuándo fue la última reforma del paseo?",
     "hint": "Ya ha llovido un poco en vdd...",
     "answers": ["2021", "2019", "2010", "2020"],
     "correctAnswerIndex": 0
@@ -39,7 +39,7 @@
   },
   {
     "id": 5,
-    "question": "¿Cuándo abre Emilio el quiosco?",
+    "question": "¿Cuándo abre se abre el quiosco?",
     "hint": "Es un día muy especial",
     "answers": ["Año Nuevo", "Semana Santa", "Día de Andalucía", "San Juan"],
     "correctAnswerIndex": 3
@@ -53,7 +53,7 @@
   },
   {
     "id": 7,
-    "question": "¿Cuál fue hasta la fecha el deporte de moda en Melicena?",
+    "question": "¿Cuál fue allá por 2021-2022 el deporte de moda en Melicena?",
     "hint": "Es un deporte divertido",
     "answers": ["Barranquismo", "Parapente", "Tenis", "Paddle surf"],
     "correctAnswerIndex": 3
@@ -143,5 +143,97 @@
       "Asis, Pepe y Luis"
     ],
     "correctAnswerIndex": 2
+  },
+  {
+    "id": 16,
+    "question": "¿Cuál es la MAYOR novedad del verano en Melicena?",
+    "answers": [
+      "Han encontrado un huevo de ornitorrinco cerca de la cascada",
+      "Se ha caído un trozo de roca del peñón",
+      "Un melicenero ha cultivado unos tomates que son azules",
+      "Hay un municipal que procura que no aparque ni Dios en el paseo marítimo"
+    ],
+    "correctAnswerIndex": 3
+  },
+  {
+    "id": 17,
+    "question": "¿Cómo se llama la playa de la imagen?",
+    "img": "/melicena-canas.jpg",
+    "answers": [
+      "La playa de las conchas",
+      "La playa de las cañas",
+      "Cala Nabo",
+      "Cala de la Rijana"
+    ],
+    "correctAnswerIndex": 1
+  },
+  {
+    "id": 18,
+    "question": "¿Cuál es el deporte estrella del verano 2023?",
+    "answers": ["1x2", "Carrera de drones", "Petanca", "Playajedrez"],
+    "correctAnswerIndex": 2
+  },
+  {
+    "id": 19,
+    "question": "¿Donde podiás escuchar el dicho <<La tierra es redonda y se demuestra así>>?",
+    "answers": [
+      "En las carreras de sacos",
+      "En el juego de los huevos",
+      "En la final de fútbol",
+      "En la carrera de cintas"
+    ],
+    "correctAnswerIndex": 1
+  },
+  {
+    "id": 20,
+    "question": "¿Qué se puede ver por la noche en el cielo melicenero?",
+    "answers": [
+      "Un OVNI",
+      "El Falcon de Pedro Sánchez",
+      "Los satélites de Elon Musk",
+      "Todas las anteriores"
+    ],
+    "correctAnswerIndex": 2
+  },
+  {
+    "id": 21,
+    "question": "¿Cuándo suelen celebrarse las fiestas de Melicena?",
+    "answers": [
+      "A principios de julio",
+      "Tercera semana de julio",
+      "Tercera semana de agosto",
+      "A principios de agosto"
+    ],
+    "correctAnswerIndex": 2
+  },
+  {
+    "id": 22,
+    "question": "¿Cómo se llama el moderno complejo de edificios de la parte de arriba de Melicena?",
+    "answers": [
+      "Sueños de Melicena",
+      "Sueños del Mar",
+      "Sueñirráneo",
+      "Sueños del Mediterráneo"
+    ],
+    "correctAnswerIndex": 3
+  },
+  {
+    "id": 23,
+    "question": "¿Cómo se llama la patrona de Melicena?",
+    "img": "/melicena-fiestas.jpg",
+    "answers": [
+      "La virgen de las Angustias",
+      "La virgen de la Cabeza",
+      "La virgen del Mar",
+      "La virgen del Carmen"
+    ],
+    "correctAnswerIndex": 3
+  },
+  {
+    "id": 24,
+    "question": "¿Cómo se llama el dueño del quiosco?",
+    "img": "/melicena-kiosco.jpg",
+    "answers": ["Mauricio", "Emiliano", "Emilio", "Emelino"],
+    "correctAnswerIndex": 3
   }
 ]

@@ -27,10 +27,8 @@ const Start = ({ data }: { data: any }) => {
 
     if (nameRef.current?.querySelector('input')) {
       const name = nameRef.current.querySelector('input')?.value
-      console.log(name)
       if (name) setUserName(name)
     } else {
-      console.log('No se ha encontrado el input')
       setUserName('Anónimo')
     }
 

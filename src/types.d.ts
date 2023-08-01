@@ -6,4 +6,5 @@ export interface Question {
   correctAnswerIndex: number
   userSelectedAnswerIndex?: number
   isCorrectUserAnswer?: boolean
+  img?: string
 }

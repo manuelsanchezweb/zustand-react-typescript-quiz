@@ -14,7 +14,6 @@ const Quiz = () => {
 
   useEffect(() => {
     fetchNames()
-    console.log(data)
   }, [])
 
   async function fetchNames() {
