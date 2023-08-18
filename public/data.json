@@ -39,29 +39,25 @@
   },
   {
     "id": 5,
-    "question": "¿Cuándo abre se abre el quiosco?",
-    "hint": "Es un día muy especial",
+    "question": "¿Cuándo se abre el quiosco?",
     "answers": ["Año Nuevo", "Semana Santa", "Día de Andalucía", "San Juan"],
     "correctAnswerIndex": 3
   },
   {
     "id": 6,
     "question": "Todo buen melicenero sabe que la mezquita antes era …",
-    "hint": "Es un lugar de culto",
     "answers": ["una notaría", "una tienda", "un bar", "una pizzería"],
     "correctAnswerIndex": 2
   },
   {
     "id": 7,
     "question": "¿Cuál fue allá por 2021-2022 el deporte de moda en Melicena?",
-    "hint": "Es un deporte divertido",
     "answers": ["Barranquismo", "Parapente", "Tenis", "Paddle surf"],
     "correctAnswerIndex": 3
   },
   {
     "id": 8,
     "question": "¿Cuál es la primera casa del pueblo?",
-    "hint": "Es una casa muy bonita",
     "answers": ["La de la Dora", "La de la Kika", "La de Emilio", "La casería"],
     "correctAnswerIndex": 1
   },
@@ -79,13 +75,13 @@
   },
   {
     "id": 10,
-    "question": "¿Cuál de estos acontecimientos es más reciente?",
-    "hint": "Es un acontecimiento muy reciente",
+    "question": "¿Cuál de estos acontecimientos tuvo lugar el 14 de agosto de 2021?",
+    "hint": "Nos tuvo a todos en vilo",
     "answers": [
       "Persecución de narcos en la playa",
       "Caída de roca del peñón",
-      "Reforma del paseo marítimo",
-      "Reforma de la torre"
+      "Apertura del paseo marítimo tras reforma",
+      "Apertura de la torre tras reforma"
     ],
     "correctAnswerIndex": 0
   },
